@@ -4,7 +4,7 @@ Private Sub CommandButton1_Click()
     Dim A As Double
     Dim P As Double
     
-    A = InputBox("Podaj wartoœæ temperatury w stopniach Fahrenheita")
+    A = InputBox("Podaj wartoÅ›Ä‡ temperatury w stopniach Fahrenheita")
     P = Geometria.StopnieF(A)
     MsgBox "W przeliczeniu na stopnie Celcjusza wynosi: " & P & "."
 End Sub
@@ -13,21 +13,21 @@ Private Sub CommandButton2_Click()
     Dim A As String
     Dim B As String
     
-    A = InputBox("Podaj swoje imiê")
+    A = InputBox("Podaj swoje imiÄ™")
     B = InputBox("Podaj swoje nazwisko")
-    MsgBox "Nazywasz siê " & A & " " & B & "."
+    MsgBox "Nazywasz siÄ™ " & A & " " & B & "."
 End Sub
 
 Private Sub CommandButton1_Click() 
 Dim A As Double
 Dim P As Double
 
-A = InputBox("Podaj promieñ ko³a")
+A = InputBox("Podaj promieÃ± koÅ‚a")
 P = Geometria.PoleKola(A)
 If A > 0 Then
-    MsgBox "Pole ko³a wynosi " & P & "."
+    MsgBox "Pole koÅ‚a wynosi " & P & "."
 Else
-    MsgBox "Nieprawid³owy promieñ ko³a"
+    MsgBox "NieprawidÅ‚owy promieÅ„ koÅ‚a"
 End If
 End Sub
 
@@ -36,17 +36,17 @@ Dim A As Double
 Dim B As Double
 Dim x As Double
 
-A = InputBox("Podaj wartoœæ parametru a")
-B = InputBox("Podaj wartoœæ parametru b")
+A = InputBox("Podaj wartoÅ›Ä‡ parametru a")
+B = InputBox("Podaj wartoÅ›Ä‡ parametru b")
 x = -B / A
-MsgBox "Rozwi¹zaniem równania jest x=" & x & "."
+MsgBox "RozwiÄ…zaniem rÃ³wnania jest x=" & x & "."
 End Sub
 
 Private Sub CommandButton1_Click() 
 Dim R, M, D As Integer
     R = InputBox("Podaj rok")
-    M = InputBox("Podaj miesi¹c")
-    D = InputBox("Podaj dzieñ")
+    M = InputBox("Podaj miesiÄ…c")
+    D = InputBox("Podaj dzieÃ±")
     MsgBox WeekdayName(Weekday(DateSerial(R, M, D), vbMonday))
 End Sub
 
@@ -60,7 +60,7 @@ Private Sub CommandButton2_Click()
 End Sub
 
 Private Sub CommandButton3_Click()
-ActiveWorkbook.SaveAs "C:\Users\komputer\Desktop\Programowanie w jêzyku Visual Basic\zadanie2.xlsm"
+ActiveWorkbook.SaveAs "C:\Users\komputer\Desktop\Programowanie w jÄ™zyku Visual Basic\zadanie2.xlsm"
 End Sub
 
 Private Sub CommandButton4_Click()
@@ -69,20 +69,20 @@ End Sub
 
 Private Sub CommandButton5_Click()
     Dim A As Integer
-    A = InputBox("Do którego arkusza mam przejœæ?")
+    A = InputBox("Do ktÃ³rego arkusza mam przejÅ›Ä‡?")
     ThisWorkbook.Worksheets(A).Activate
 End Sub
 
 Private Sub CommandButton6_Click()
     Dim A As Integer
-    A = InputBox("Ile arkuszy mam dodaæ?")
+    A = InputBox("Ile arkuszy mam dodaÄ‡?")
     ThisWorkbook.Worksheets.Add After:=Worksheets(Worksheets.Count), Count:=A
 End Sub
 
 
 Private Sub CommandButton7_Click()
     Dim A As Integer
-    A = InputBox("Który arkusz mam usun¹æ?")
+    A = InputBox("KtÃ³ry arkusz mam usunÄ…Ä‡?")
     ThisWorkbook.Worksheets(A).Delete
 End Sub
 
@@ -100,13 +100,13 @@ Private Sub CommandButton9_Click()
     End If
 End Sub
 
-Private Sub CommandButton1_Click() 'zadanie 66
+Private Sub CommandButton1_Click() 
     Cells(7, 4).Formula = Cells(7, 4) * 2
 End Sub
 
 Private Sub CommandButton2_Click()
     Dim A As String
-    A = InputBox("Podaj nazwê arkusza")
+    A = InputBox("Podaj nazwÄ™ arkusza")
     
     For I = 1 To Worksheets.Count
         If Worksheets(I).Name = A Then
@@ -115,7 +115,7 @@ Private Sub CommandButton2_Click()
     Next I
     
         If Istnieje = True Then
-        B = InputBox("Podaj now¹ nazwê")
+        B = InputBox("Podaj nowÄ… nazwÄ™")
         Worksheets(A).Name = B
         Else
         ThisWorkbook.Worksheets.Add
@@ -126,7 +126,7 @@ End Sub
 Private Sub CommandButton3_Click()
     MsgBox "Lewy margines = " & PageSetup.LeftMargin
     MsgBox "Prawy margines = " & PageSetup.RightMargin
-    MsgBox "Górny margines = " & PageSetup.TopMargin
+    MsgBox "GÃ³rny margines = " & PageSetup.TopMargin
     MsgBox "Dolny margines = " & PageSetup.BottomMargin
 End Sub
 
