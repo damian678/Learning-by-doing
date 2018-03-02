@@ -236,7 +236,6 @@ Function LiczbaCyfr(A As Long) As Long
         A = A / 10
         Ldzielen = Ldzielen + 1
     Loop
-    
     LiczbaCyfr = Ldzielen + 1
 End Function
 
