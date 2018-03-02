@@ -1,17 +1,17 @@
 Option Explicit
 
 Sub Informacje()
-    MsgBox "Informacja 1 - Wyst¹pi³ b³¹d", vbAbortRetryIgnore, "Komunikat"
-    MsgBox "Informacja 2 - Kolejny b³¹d", vbApplicationModal, "B³¹d"
-    MsgBox "Informacja 3 - B³¹d", vbOKOnly, "Okienko"
-    MsgBox "Informacja 4 - Koniec b³êdu", vbCritical, "Okno b³êdu"
+    MsgBox "Informacja 1 - WystÄ…piÅ‚ bÅ‚Ä…d", vbAbortRetryIgnore, "Komunikat"
+    MsgBox "Informacja 2 - Kolejny bÅ‚Ä…d", vbApplicationModal, "BÅ‚Ä…d"
+    MsgBox "Informacja 3 - BÅ‚Ä…d", vbOKOnly, "Okienko"
+    MsgBox "Informacja 4 - Koniec bÅ‚Ä™du", vbCritical, "Okno bÅ‚Ä™du"
 End Sub
 
 Sub Procedura()
     Dim A As Double
     Dim P As Double
     
-    A = InputBox("Podaj d³ugoœæ boku kwadratu")
+    A = InputBox("Podaj dÅ‚ugoÅ›Ä‡ boku kwadratu")
     P = Geometria.Polekwadratu(A)
     MsgBox "Pole kwadratu wynosi " & P & "."
 End Sub
@@ -20,10 +20,10 @@ Sub Sumowanie()
     Dim IleLiczb As Integer
     Dim I As Integer
     Dim Suma, Liczba As Double
-    IleLiczb = InputBox("Ile liczb chcesz zsumowaæ?")
+    IleLiczb = InputBox("Ile liczb chcesz zsumowaÄ‡?")
     Suma = 0
     For I = 1 To IleLiczb
-        Liczba = InputBox("Podaj kolejn¹ liczbê")
+        Liczba = InputBox("Podaj kolejnÄ… liczbÄ™")
         Suma = Suma + Liczba
     Next I
     MsgBox "Wynik: " & Suma
@@ -36,7 +36,7 @@ Sub TestBledu()
     B = InputBox("B= ")
     L = Logarytm(A, B)
     If IsError(L) Then
-        MsgBox "B³¹d"
+        MsgBox "BÅ‚Ä…d"
     Else
         MsgBox L
     End If
@@ -44,7 +44,7 @@ End Sub
 
 Function ZnakNaPozycji(Napis As String, Pozycja As Integer) As String
     If Pozycja < 1 Or Pozycja > Len(Napis) Then
-        Err.Raise vbObjectError + 1, , "Z³a pozycja"
+        Err.Raise vbObjectError + 1, , "ZÅ‚a pozycja"
     Else
         ZnakNaPozycji = Mid(Napis, Pozycja, 1)
     End If
@@ -59,7 +59,7 @@ Sub TestBledu2()
     MsgBox ZnakNaPozycji(Napis, Poz)
     Exit Sub
 ObslugaBledow:
- MsgBox "B³¹d"
+ MsgBox "BÅ‚Ä…d"
 End Sub
 
 Function Skrot(Nazwa As String) As String
@@ -73,11 +73,9 @@ End Function
 
 Sub TestujSkrot()
     Dim Nazwa As String
-    Nazwa = InputBox("Podaj nazwê: ")
+    Nazwa = InputBox("Podaj nazwÄ™: ")
     MsgBox Skrot(Nazwa)
 End Sub
-
-
 
 Sub Data()
     MsgBox Date
@@ -109,7 +107,8 @@ Sub plusczas()
     MsgBox Czas
 End Sub
 
-' Napisz procedujê licz¹c¹ ró¿nicê dni pomiêdzy dwoma datami
+' Napisz procedujÄ™ liczÄ…cÄ… rÃ³Å¼nicÄ™ dni pomiÄ™dzy dwoma datami
+
 Sub Roznica()
     Dim Roznica As Variant
     Data1 = DateSerial(1994, 7, 31)
@@ -118,22 +117,22 @@ Sub Roznica()
     MsgBox Roznica
 End Sub
 
-'Napisz procedurê mówi¹c¹ o tym, który dzieñ tygodnia ma data przedstawiona przez u¿ytkownika
+'Napisz procedurÄ™ przedstawiajÄ…cÄ…, ktÃ³ry dzieÅ„ tygodnia ma data podana przez uÅ¼ytkownika
 Sub dzientygodnia()
     Dim R, M, D As Integer
     Dim Data As Variant
     Dim dzientygodnia As Variant
     R = InputBox("Podaj rok")
-    M = InputBox("Podaj miesi¹c")
-    D = InputBox("Podaj dzieñ")
+    M = InputBox("Podaj miesiÄ…c")
+    D = InputBox("Podaj dzieÅ„")
     Data = DateSerial(R, M, D)
     dzientygodnia = Weekday(Data, vbMonday)
     MsgBox dzientygodnia
 End Sub
 
 Sub test() 'zadanie 68
-    LMagazynow = InputBox("Podaj liczbê magazynów")
-    LTowarow = InputBox("Podaj liczbê towarów")
+    LMagazynow = InputBox("Podaj liczbÄ™ magazynÃ³w")
+    LTowarow = InputBox("Podaj liczbÄ™ towarÃ³w")
     Dim I As Integer
     Dim j As Integer
     Cells(1, 2) = "Suma"
@@ -151,8 +150,8 @@ Sub test2()
     Dim LiczbaMagazynow As Integer
     Dim LiczbaTowarow As Integer
     Dim I As Integer
-    LiczbaMagazynow = InputBox("Podaj liczbê magazynów")
-    LiczbaTowarow = InputBox("Podaj liczbê towarów")
+    LiczbaMagazynow = InputBox("Podaj liczbÄ™ magazynÃ³w")
+    LiczbaTowarow = InputBox("Podaj liczbÄ™ towarÃ³w")
     Range("B1") = "Suma"
     For I = 1 To LiczbaMagazynow
         Cells(1, I + 2) = "Magazyn " & I
@@ -162,4 +161,4 @@ Sub test2()
         Cells(I + 1, 2).FormulaLocal _
         = "=suma(C" & (I + 1) & ":" & Chr(Asc("B") + LiczbaMagazynow) & (I + 1) & ")"
     Next I
-End Sub\
+End Sub
