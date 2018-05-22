@@ -317,3 +317,10 @@ Function Skrot(Napis As String) As String
         End If
     Next I
 End Function
+
+
+Function WezKod(Napis As String) As String
+    Dim nowe As String
+    nowe = Right(Napis, 7)
+    WezKod = Left(nowe, 3) & "-" & Mid(nowe, 4, 2) & "-" & Right(nowe, 2)
+End Function
